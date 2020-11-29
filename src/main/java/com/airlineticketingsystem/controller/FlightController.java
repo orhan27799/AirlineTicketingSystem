@@ -12,36 +12,35 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.airlineticketingsystem.model.Airport;
-import com.airlineticketingsystem.repository.AirportRepository;
+import com.airlineticketingsystem.model.Flight;
+import com.airlineticketingsystem.repository.FlightRepository;
 
 @Controller
-public class AirportController {
-
+public class FlightController {
+	
 	@Autowired
-	AirportRepository airportRepository;
+	FlightRepository flightRepository;
 
-	@PostMapping("/airport/add")
+	@PostMapping("/flight/add")
 	@ResponseBody
-	public String saveAirport(@RequestBody Airport airport, BindingResult bindingResult, Model model) {
+	public String saveFlight(@RequestBody Flight flight, BindingResult bindingResult, Model model) {
 		if (bindingResult.hasErrors()) {
 
 			return "error";
 		}
-		airportRepository.save(airport);
+		flightRepository.save(flight);
 
 		return "success";
 	}
 	
-	    @GetMapping("/airport/search")
+	    @GetMapping("/flight/search")
 	    @ResponseBody
-	    public  List<Airport> searhAirport(Model model, @Param("name") String name) {
-	        List<Airport> listAirport = airportRepository.searchByName(name);
+	    public  List<Flight> searhFlight(Model model, @Param("name") String name) {
+	        List<Flight> listFlight = flightRepository.searchByName(name);
 	      
 	         
-	        return listAirport;
+	        return listFlight;
 	    }
-	
 	
 	
 

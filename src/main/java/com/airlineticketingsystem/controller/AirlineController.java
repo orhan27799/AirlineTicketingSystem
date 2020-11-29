@@ -23,7 +23,7 @@ public class AirlineController {
 
 	@PostMapping("/airline/add")
 	@ResponseBody
-	public String saveAirport(@RequestBody Airline airline, BindingResult bindingResult, Model model) {
+	public String saveAirline(@RequestBody Airline airline, BindingResult bindingResult, Model model) {
 		if (bindingResult.hasErrors()) {
 
 			return "error";
@@ -35,7 +35,7 @@ public class AirlineController {
 	
 	    @GetMapping("/airline/search")
 	    @ResponseBody
-	    public  List<Airline> viewHomePage(Model model, @Param("name") String name) {
+	    public  List<Airline> searchAirline(Model model, @Param("name") String name) {
 	        List<Airline> listAirline = airlineRepository.searchByName(name);
 	      
 	         

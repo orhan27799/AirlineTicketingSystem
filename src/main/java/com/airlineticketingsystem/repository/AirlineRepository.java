@@ -9,7 +9,7 @@ import com.airlineticketingsystem.model.Airline;
 
 public interface AirlineRepository  extends JpaRepository<Airline, Integer>{
 	
-	@Query("SELECT a FROM Airline a WHERE a.name LIKE ?1%")
+	@Query("SELECT a FROM Airline a WHERE a.name LIKE %?1%")
 	List<Airline> searchByName(String name);
 
 }
