@@ -1,6 +1,11 @@
-# AirlineTicketingSystem
+# AirlineTicketingSystem (Havayolları biletleme sistemi)
 
-Used technologies : Spring Boot and java 1.8
+Used technologies :
+● JAVA 8 
+● Maven 
+● Spring Boot
+● Hibernate + H2 Database
+● Restful Web Service (JSON )
 
 Havaalanı Ekleme
 
