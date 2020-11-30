@@ -33,6 +33,15 @@ public class FlightController {
 		return "success";
 	}
 	
+	    @GetMapping("/flight/list")
+	    @ResponseBody
+	    public  List<Flight> searhFlight(Model model) {
+	        List<Flight> listFlight = flightRepository.findAll();
+	      
+	         
+	        return listFlight;
+	    }
+	
 	    @GetMapping("/flight/search")
 	    @ResponseBody
 	    public  List<Flight> searhFlight(Model model, @Param("name") String name) {

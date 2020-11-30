@@ -26,7 +26,7 @@ public class Ticket implements Serializable {
 
 	private Integer number;
 	
-    private Long creditCardNumber;
+    private String creditCardNumber;
 	
 	private String bankName;
 	
@@ -44,7 +44,7 @@ public class Ticket implements Serializable {
 		super();
 	}
 
-	public Ticket(Double price, Integer number,Long creditCardNumber, String fullName,String expirationMonth,String expirationYear) {
+	public Ticket(Double price, Integer number,String creditCardNumber, String fullName,String expirationMonth,String expirationYear) {
 		super();
 		this.price = price;
 		this.number = number;
@@ -87,11 +87,13 @@ public class Ticket implements Serializable {
 		this.flight = flight;
 	}
 
-	public Long getCreditCardNumber() {
+	
+
+	public String getCreditCardNumber() {
 		return creditCardNumber;
 	}
 
-	public void setCreditCardNumber(Long creditCardNumber) {
+	public void setCreditCardNumber(String creditCardNumber) {
 		this.creditCardNumber = creditCardNumber;
 	}
 
