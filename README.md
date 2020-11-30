@@ -1,5 +1,7 @@
 # AirlineTicketingSystem
 
+Used technologies : Spring Boot and java 1.8
+
 Havaalanı Ekleme
 
 http://localhost:8080/airlineticketsystem/airport/add (POST)
@@ -628,7 +630,7 @@ Response :success
 Alınan Bilet Listesi
 
 http://localhost:8080/airlineticketsystem/ticket/list(GET)
-Response -> [
+Response ->[
   {
     "id": 12,
     "price": 10,
@@ -754,7 +756,6 @@ Response -> [
     }
   }
 ]
-
 
 -------------------------------------------------------------------
 
